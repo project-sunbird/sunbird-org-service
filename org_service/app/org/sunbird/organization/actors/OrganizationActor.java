@@ -23,6 +23,22 @@ public class OrganizationActor extends BaseActor {
 
     String operation = request.getOperation();
 
+    switch (operation) {
+      case "createOrg":
+        createOrganization(request);
+        break;
+      case "updateOrg":
+        updateOrganization(request);
+        break;
+      default:
+        onReceiveUnsupportedOperation("OrganizationActor");
+    }
+  }
+
+  private void createOrganization(Request request) {
+  }
+
+  private void updateOrganization(Request request) {
   }
 
 }
