@@ -8,6 +8,7 @@ import org.sunbird.organization.utils.Constant;
 import org.sunbird.util.ConfigUtil;
 
 /**
+ * Actor to handle Org API requests
  * @author arvind.
  */
 @ActorConfig(
@@ -22,7 +23,6 @@ public class OrganizationActor extends BaseActor {
   public void onReceive(Request request) throws Throwable {
 
     String operation = request.getOperation();
-
     switch (operation) {
       case "createOrg":
         createOrganization(request);
