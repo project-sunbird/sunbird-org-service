@@ -7,6 +7,4 @@ import org.sunbird.controllers.BaseController;
  */
 public class OrganizationController extends BaseController {
 
-
-
 }

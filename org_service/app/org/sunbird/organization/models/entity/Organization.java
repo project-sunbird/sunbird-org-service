@@ -1,22 +1,21 @@
-package org.sunbird.organization.models.api;
+package org.sunbird.organization.models.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
-import java.util.Map;
-import org.sunbird.organization.models.entity.Address;
 
 /**
+ * Entity class represents organisation table
  * @author arvind
  */
 @JsonIgnoreProperties(
     ignoreUnknown = true
 )
 @JsonInclude(Include.NON_NULL)
-public class OrganizationRequest implements Serializable {
+public class Organization {
+
   private String id;
   private String addressId;
   private String channel;
@@ -48,15 +47,10 @@ public class OrganizationRequest implements Serializable {
   private String updatedBy;
   private String updatedDate;
   private List<String> locationIds;
-  private List<Map<String, Object>> contactDetails;
-  private List<String> locationCode;
-  private Address address;
-
-  public OrganizationRequest() {
-  }
+  private String contactDetails;
 
   public String getId() {
-    return this.id;
+    return id;
   }
 
   public void setId(String id) {
@@ -64,7 +58,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getAddressId() {
-    return this.addressId;
+    return addressId;
   }
 
   public void setAddressId(String addressId) {
@@ -72,7 +66,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getChannel() {
-    return this.channel;
+    return channel;
   }
 
   public void setChannel(String channel) {
@@ -80,7 +74,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getCommunityId() {
-    return this.communityId;
+    return communityId;
   }
 
   public void setCommunityId(String communityId) {
@@ -88,7 +82,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getContactDetail() {
-    return this.contactDetail;
+    return contactDetail;
   }
 
   public void setContactDetail(String contactDetail) {
@@ -96,7 +90,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getCreatedBy() {
-    return this.createdBy;
+    return createdBy;
   }
 
   public void setCreatedBy(String createdBy) {
@@ -104,7 +98,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getCreatedDate() {
-    return this.createdDate;
+    return createdDate;
   }
 
   public void setCreatedDate(String createdDate) {
@@ -112,7 +106,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public Timestamp getDateTime() {
-    return this.dateTime;
+    return dateTime;
   }
 
   public void setDateTime(Timestamp dateTime) {
@@ -120,7 +114,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getDescription() {
-    return this.description;
+    return description;
   }
 
   public void setDescription(String description) {
@@ -128,7 +122,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getExternalId() {
-    return this.externalId;
+    return externalId;
   }
 
   public void setExternalId(String externalId) {
@@ -136,7 +130,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getHashTagId() {
-    return this.hashTagId;
+    return hashTagId;
   }
 
   public void setHashTagId(String hashTagId) {
@@ -144,7 +138,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getHomeUrl() {
-    return this.homeUrl;
+    return homeUrl;
   }
 
   public void setHomeUrl(String homeUrl) {
@@ -152,7 +146,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getImgUrl() {
-    return this.imgUrl;
+    return imgUrl;
   }
 
   public void setImgUrl(String imgUrl) {
@@ -160,23 +154,23 @@ public class OrganizationRequest implements Serializable {
   }
 
   public Boolean getDefault() {
-    return this.isDefault;
+    return isDefault;
   }
 
   public void setDefault(Boolean aDefault) {
-    this.isDefault = aDefault;
+    isDefault = aDefault;
   }
 
   public Boolean getRootOrg() {
-    return this.isRootOrg;
+    return isRootOrg;
   }
 
   public void setRootOrg(Boolean rootOrg) {
-    this.isRootOrg = rootOrg;
+    isRootOrg = rootOrg;
   }
 
   public String getLocationId() {
-    return this.locationId;
+    return locationId;
   }
 
   public void setLocationId(String locationId) {
@@ -184,7 +178,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public Integer getNoOfMembers() {
-    return this.noOfMembers;
+    return noOfMembers;
   }
 
   public void setNoOfMembers(Integer noOfMembers) {
@@ -192,7 +186,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getOrgCode() {
-    return this.orgCode;
+    return orgCode;
   }
 
   public void setOrgCode(String orgCode) {
@@ -200,7 +194,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getOrgName() {
-    return this.orgName;
+    return orgName;
   }
 
   public void setOrgName(String orgName) {
@@ -208,7 +202,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getOrgType() {
-    return this.orgType;
+    return orgType;
   }
 
   public void setOrgType(String orgType) {
@@ -216,7 +210,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getOrgTypeId() {
-    return this.orgTypeId;
+    return orgTypeId;
   }
 
   public void setOrgTypeId(String orgTypeId) {
@@ -224,7 +218,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getPreferredLanguage() {
-    return this.preferredLanguage;
+    return preferredLanguage;
   }
 
   public void setPreferredLanguage(String preferredLanguage) {
@@ -232,7 +226,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getProvider() {
-    return this.provider;
+    return provider;
   }
 
   public void setProvider(String provider) {
@@ -240,7 +234,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getRootOrgId() {
-    return this.rootOrgId;
+    return rootOrgId;
   }
 
   public void setRootOrgId(String rootOrgId) {
@@ -248,7 +242,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getSlug() {
-    return this.slug;
+    return slug;
   }
 
   public void setSlug(String slug) {
@@ -256,7 +250,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public Integer getStatus() {
-    return this.status;
+    return status;
   }
 
   public void setStatus(Integer status) {
@@ -264,7 +258,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getTheme() {
-    return this.theme;
+    return theme;
   }
 
   public void setTheme(String theme) {
@@ -272,7 +266,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getThumbnail() {
-    return this.thumbnail;
+    return thumbnail;
   }
 
   public void setThumbnail(String thumbnail) {
@@ -280,7 +274,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getUpdatedBy() {
-    return this.updatedBy;
+    return updatedBy;
   }
 
   public void setUpdatedBy(String updatedBy) {
@@ -288,7 +282,7 @@ public class OrganizationRequest implements Serializable {
   }
 
   public String getUpdatedDate() {
-    return this.updatedDate;
+    return updatedDate;
   }
 
   public void setUpdatedDate(String updatedDate) {
@@ -296,35 +290,18 @@ public class OrganizationRequest implements Serializable {
   }
 
   public List<String> getLocationIds() {
-    return this.locationIds;
+    return locationIds;
   }
 
   public void setLocationIds(List<String> locationIds) {
     this.locationIds = locationIds;
   }
 
-  public List<Map<String, Object>> getContactDetails() {
+  public String getContactDetails() {
     return contactDetails;
   }
 
-  public void setContactDetails(
-      List<Map<String, Object>> contactDetails) {
+  public void setContactDetails(String contactDetails) {
     this.contactDetails = contactDetails;
-  }
-
-  public List<String> getLocationCode() {
-    return this.locationCode;
-  }
-
-  public void setLocationCode(List<String> locationCode) {
-    this.locationCode = locationCode;
-  }
-
-  public Address getAddress() {
-    return this.address;
-  }
-
-  public void setAddress(Address address) {
-    this.address = address;
   }
 }
