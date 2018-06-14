@@ -9,6 +9,7 @@ public class Constant {
 
   private Constant() {}
 
-  public static final String CREATE_ORGANISATION = "createOrganisation";
+  public static final String CREATE_ORGANIZATION = "createOrg";
+  public static final String UPDATE_ORGANIZATION = "updateOrg";
 
 }

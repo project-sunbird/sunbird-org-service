@@ -11,10 +11,10 @@ import org.sunbird.util.ConfigUtil;
  * @author arvind.
  */
 @ActorConfig(
-    tasks = {Constant.CREATE_USER, Constant.UPDATE_USER},
+    tasks = {Constant.CREATE_ORGANIZATION, Constant.UPDATE_ORGANIZATION},
     asyncTasks = {}
 )
-public class OrganisationActor extends BaseActor {
+public class OrganizationActor extends BaseActor {
 
   private static Config config = ConfigUtil.getConfig();
 
