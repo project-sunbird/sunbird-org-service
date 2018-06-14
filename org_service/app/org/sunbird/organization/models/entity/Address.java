@@ -140,21 +140,4 @@ public class Address {
   public void setZipcode(String zipcode) {
     this.zipcode = zipcode;
   }
-
-  /** This ENUM will hold all the Address type name. */
-  public enum AddressType {
-    PERMANENT("permanent"),
-    CURRENT("current"),
-    OFFICE("office"),
-    HOME("home");
-    private String typeName;
-
-    private AddressType(String name) {
-      this.typeName = name;
-    }
-
-    public String getTypeName() {
-      return typeName;
-    }
-  }
 }
