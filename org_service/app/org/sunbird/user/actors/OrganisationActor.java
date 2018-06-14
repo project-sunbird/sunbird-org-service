@@ -4,14 +4,13 @@ import com.typesafe.config.Config;
 import org.sunbird.actor.core.BaseActor;
 import org.sunbird.actor.router.ActorConfig;
 import org.sunbird.common.request.Request;
-import org.sunbird.user.utils.Constant;
 import org.sunbird.util.ConfigUtil;
 
 /**
  * @author arvind.
  */
 @ActorConfig(
-    tasks = {Constant.CREATE_USER, Constant.UPDATE_USER},
+    tasks = {"createOrg", "updateOrg"},
     asyncTasks = {}
 )
 public class OrganisationActor extends BaseActor {
