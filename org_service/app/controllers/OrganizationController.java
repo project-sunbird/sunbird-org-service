@@ -130,6 +130,7 @@ public class OrganizationController extends BaseController {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private Map<String, Object> createRequestMap(Map<String, Object> orgData, boolean updateAddress) {
 		Map<String, Object> requestMap = new HashMap<>();
 		if (updateAddress) {
